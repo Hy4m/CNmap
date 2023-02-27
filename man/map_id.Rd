@@ -33,6 +33,8 @@ county_id(
 \item{grep}{logical, if `TRUE` (default) will use regular expressions.}
 
 \item{na.rm}{logical, if `TRUE` will remove `NA` value.}
+
+\item{province, city}{ids of parent.}
 }
 \value{
 character vector.

@@ -29,6 +29,7 @@ extract_county <- function(map, ...) {
 #' @title Extract ID
 #' @description Helper functions to extract ID of CNmap by numeric-id or name-id.
 #' @param ... valid numeric id or name.
+#' @param province,city ids of parent.
 #' @param output 'num' means return numeric id, and 'chr' means return name id.
 #' @param grep logical, if `TRUE` (default) will use regular expressions.
 #' @param na.rm logical, if `TRUE` will remove `NA` value.
@@ -199,7 +200,6 @@ get_id <- function(id,
                    na.rm = TRUE) {
   id <- as.integer(id)
   level <- match.arg(level)
-
   id <- vapply(id, function(x) {
     if (level == "province") {
       if (is.na(x)) {
@@ -234,3 +234,10 @@ get_id <- function(id,
     id
   }
 }
+
+#' @noRd
+utils::globalVariables(
+  c("CNmap_province",
+    "CNmap_city",
+    "CNmap_county")
+)
