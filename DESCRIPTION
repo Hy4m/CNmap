@@ -1,0 +1,21 @@
+Package: CNmap
+Type: Package
+Title: Map Datasets of China
+Version: 0.1.0
+Author: Houyun Huang <houyunhuang@163.com>
+Maintainer: Houyun Huang <houyunhuang@163.com>
+Description: Map Datasets of China (copy from https://github.com/Civitasv/DataV_GeoJSON).
+License: GPL-2
+URL: https://github.com/Hy4m/CNmap
+BugReports: https://github.com/Hy4m/CNmap/issues
+LazyData: TRUE
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+Imports: 
+    httr,
+    rlang
+Suggests: 
+    testthat (>= 3.0.0),
+    ggplot2 (>= 3.0.0),
+    sf
+RoxygenNote: 7.2.1
